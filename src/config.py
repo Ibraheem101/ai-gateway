@@ -2,7 +2,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
-    SECRET_KEY: str = "INFO"
+    SECRET_KEY: str
+    LOG_LEVEL: str = "INFO"
 
     DATABASE_URL: str
     REDIS_URL: str
