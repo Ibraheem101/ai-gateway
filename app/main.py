@@ -2,7 +2,7 @@ from typing import Any, Dict
 
 from fastapi import FastAPI, status
 
-from src.config import settings
+from app.core.config import settings
 
 
 app = FastAPI(
