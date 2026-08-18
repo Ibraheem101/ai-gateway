@@ -1,9 +1,8 @@
-from typing import Any, Dict
+from typing import Any
 
 from fastapi import FastAPI, status
 
 from app.core.config import settings
-
 
 app = FastAPI(
     title="AI Gateway",
@@ -13,8 +12,5 @@ app = FastAPI(
 
 
 @app.get("/health", status_code=status.HTTP_200_OK)
-async def system_health_check() -> Dict[str, Any]:
-    return {
-        "status": "healthy",
-        "environment": settings.ENVIRONMENT
-    }
+async def system_health_check() -> dict[str, Any]:
+    return {"status": "healthy", "environment": settings.ENVIRONMENT}

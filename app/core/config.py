@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
     SECRET_KEY: str
