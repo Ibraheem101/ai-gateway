@@ -6,6 +6,9 @@ class Settings(BaseSettings):
     SECRET_KEY: str
     LOG_LEVEL: str = "INFO"
 
+    POSTGRES_USER: str
+    POSTGRES_PASSWORD: str
+    POSTGRES_DB: str
     DATABASE_URL: str
     REDIS_URL: str
 
