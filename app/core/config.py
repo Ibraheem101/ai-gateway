@@ -4,6 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
     SECRET_KEY: str
+    ALGORITHM: str = "HS256"
     LOG_LEVEL: str = "INFO"
 
     POSTGRES_USER: str
